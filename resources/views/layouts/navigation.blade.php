@@ -18,9 +18,11 @@
                     <x-nav-link :href="route('repositorios.index')" :active="request()->routeIs('repositorios.index')">
                         {{ __('Repositorios') }}
                     </x-nav-link>
+                    @if ( Auth::user()->rol == 1)
                     <x-nav-link :href="route('usuarios.index')" :active="request()->routeIs('usuarios.index')">
                         {{ __('Usuarios') }}
                     </x-nav-link>
+                    @endif
                 </div>
             </div>
 
@@ -75,9 +77,11 @@
             <x-responsive-nav-link :href="route('repositorios.index')" :active="request()->routeIs('repositorios.index')">
                 {{ __('Repositorios') }}
             </x-responsive-nav-link>
+            @if ( Auth::user()->rol == 1)
             <x-responsive-nav-link :href="route('usuarios.index')" :active="request()->routeIs('usuarios.index')">
                 {{ __('Usuarios') }}
             </x-responsive-nav-link>
+            @endif
         </div>
 
         <!-- Responsive Settings Options -->

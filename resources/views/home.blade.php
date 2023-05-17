@@ -17,7 +17,7 @@
         @foreach ($repositorios as $repositorio)
         <a href="#" class="bg-gray-100 rounded-lg px-6 py-4">
             <p class="text-xs flex items-center gap-2">
-                <span class="uppercase text-gray-700 bg-gray-200 rounded-full px-2 py-1">Tutorial</span>
+                <span class="uppercase text-gray-700 bg-gray-200 rounded-full px-2 py-1">Fecha</span>
                 <span>{{ $repositorio->created_at->format('d/m/Y') }}</span>
             </p>
 

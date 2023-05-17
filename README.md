@@ -7,6 +7,37 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Proyecto de Repositorios con Laravel
+
+Este proyecto es para administrar Repositorios, en donde existen Rol de Administrador y Usuario, para la instalacion del proyecto es necesario lo siguiente:
+
+PHP
+
+MySQL 
+Ejecutar para que el sistema tenga acceso a la DB 
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234567890'
+
+Composer
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+
+Laravel
+composer global require "laravel/installer" 
+
+ya clonado el proyecto, ejecutar lo siguiente desde la terminal:
+- composer require laravelcollective/html
+- php artisan breeze:install
+- npm install
+- npm run dev
+
+Para llenar la base de datos con datos falsos:
+- php artisan migrate:refresh --seed
+
+Para levantar el servdor
+- php artisan serve
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
